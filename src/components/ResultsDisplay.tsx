@@ -75,19 +75,19 @@ export const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ results }) => {
             value="translation"
             className="px-6 py-3 text-lg font-medium text-white/60 border-b-2 border-transparent data-[state=active]:border-red-500 data-[state=active]:text-white transition-colors"
           >
-            Reality Check
+            Decoded Intel
           </Tabs.Trigger>
           <Tabs.Trigger
             value="generations"
             className="px-6 py-3 text-lg font-medium text-white/60 border-b-2 border-transparent data-[state=active]:border-red-500 data-[state=active]:text-white transition-colors"
           >
-            Generation Analysis
+            Generational Warfare
           </Tabs.Trigger>
           <Tabs.Trigger
             value="verdict"
             className="px-6 py-3 text-lg font-medium text-white/60 border-b-2 border-transparent data-[state=active]:border-red-500 data-[state=active]:text-white transition-colors"
           >
-            Summary
+            Final Verdict
           </Tabs.Trigger>
         </Tabs.List>
 

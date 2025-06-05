@@ -1,7 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2, Shuffle, AlertTriangle, Search, Settings, Wand2, Camera, Sparkles, Scale, Crown, Lock } from 'lucide-react';
-import { EXAMPLE_PROFILES, MAX_PROFILE_CHARS } from '../types';
+import { EXAMPLE_PR          <Tabs.Trigger
+            value="single"
+            className="px-4 py-2 text-base font-medium text-white/60 border-b-2 border-transparent data-[state=active]:border-red-500 data-[state=active]:text-white transition-colors flex items-center gap-2"
+          >
+            <Search className="w-4 h-4" />
+            Solo Target
+          </Tabs.Trigger>
+          <Tabs.Trigger
+            value="compare"
+            className="px-4 py-2 text-base font-medium text-white/60 border-b-2 border-transparent data-[state=active]:border-red-500 data-[state=active]:text-white transition-colors flex items-center gap-2"
+          >
+            <Scale className="w-4 h-4" />
+            Death Match
+          </Tabs.Trigger>OFILE_CHARS } from '../types';
 import Filter from 'bad-words';
 import * as Tabs from '@radix-ui/react-tabs';
 import * as Dialog from '@radix-ui/react-dialog';
@@ -54,20 +67,20 @@ interface PremiumFeature {
 
 const PREMIUM_FEATURES: PremiumFeature[] = [
   {
-    name: "Advanced Analysis",
-    description: "More detailed analysis with additional AI models",
+    name: "Deep Dive Mode",
+    description: "Multi-model psychological warfare analysis",
     price: 9.99,
     affiliateUrl: "https://example.com/elite-analysis"
   },
   {
-    name: "Photo Analysis",
-    description: "Analyze photos in addition to text profiles",
+    name: "Visual Intel",
+    description: "Read their photos like a NSA operative",
     price: 14.99,
     affiliateUrl: "https://example.com/photo-analysis"
   },
   {
-    name: "Compatibility Score",
-    description: "Compare two profiles for compatibility analysis",
+    name: "Match/Disaster Index",
+    description: "Compatibility scoring for the brave",
     price: 19.99,
     affiliateUrl: "https://example.com/compatibility"
   }
@@ -166,7 +179,7 @@ export const ProfileInput: React.FC<ProfileInputProps> = ({
       className="card mb-8"
     >
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold text-white/90">Analyze Profile</h2>
+        <h2 className="text-2xl font-bold text-white/90">Profile Intel</h2>
         <div className="flex gap-4">
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -272,14 +285,14 @@ export const ProfileInput: React.FC<ProfileInputProps> = ({
         <Tabs.Content value="single">
           <div className="mb-4">
             <label htmlFor="profile" className="block text-sm font-medium text-white/80 mb-2">
-              Elevate Your Game
+              Drop the Dating Mask
             </label>
             <div className="relative">
               <textarea
                 id="profile"
                 value={profile}
                 onChange={(e) => setProfile(e.target.value)}
-                placeholder="Paste dating profile text here for analysis..."
+                placeholder="Paste their dating profile bullshit here..."
                 className="w-full h-32 bg-transparent border border-white/10 rounded-lg p-3 text-white/70 focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-transparent transition-all resize-none"
                 disabled={isAnalyzing}
                 maxLength={MAX_PROFILE_CHARS}
@@ -295,14 +308,14 @@ export const ProfileInput: React.FC<ProfileInputProps> = ({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>
               <label htmlFor="profileA" className="block text-sm font-medium text-white/80 mb-2">
-                Profile A
+                Target A
               </label>
               <div className="relative">
                 <textarea
                   id="profileA"
                   value={profile}
                   onChange={(e) => setProfile(e.target.value)}
-                  placeholder="First profile..."
+                  placeholder="First victim..."
                   className="w-full h-32 bg-transparent border border-white/10 rounded-lg p-3 text-white/70 focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-transparent transition-all resize-none"
                   disabled={isAnalyzing}
                   maxLength={MAX_PROFILE_CHARS}
@@ -315,14 +328,14 @@ export const ProfileInput: React.FC<ProfileInputProps> = ({
 
             <div>
               <label htmlFor="profileB" className="block text-sm font-medium text-white/80 mb-2">
-                Profile B
+                Target B
               </label>
               <div className="relative">
                 <textarea
                   id="profileB"
                   value={comparisonProfile}
                   onChange={(e) => setComparisonProfile(e.target.value)}
-                  placeholder="Second profile..."
+                  placeholder="Second victim..."
                   className="w-full h-32 bg-transparent border border-white/10 rounded-lg p-3 text-white/70 focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-transparent transition-all resize-none"
                   disabled={isAnalyzing}
                   maxLength={MAX_PROFILE_CHARS}
@@ -351,19 +364,19 @@ export const ProfileInput: React.FC<ProfileInputProps> = ({
         {isAnalyzing ? (
           <>
             <Loader2 className="w-6 h-6 animate-spin" />
-            {activeTab === 'compare' ? 'ANALYZING COMPATIBILITY...' : 'DECODING PROFILE...'}
+            {activeTab === 'compare' ? 'RUNNING PSYCH EVAL...' : 'DECODING BULLSHIT...'}
           </>
         ) : (
           <>
             <Sparkles className="w-6 h-6" />
-            {activeTab === 'compare' ? 'COMPARE PROFILES' : 'REVEAL INSIGHTS'}
+            {activeTab === 'compare' ? 'BATTLE ROYALE' : 'DECODE PROFILE'}
           </>
         )}
       </motion.button>
 
       {!isDemoMode && (
         <p className="mt-4 text-sm text-white/40 text-center font-medium">
-          Press <kbd className="px-2 py-1 rounded bg-white/10 font-mono text-sm">Ctrl</kbd> + <kbd className="px-2 py-1 rounded bg-white/10 font-mono text-sm">Enter</kbd> for instant analysis
+          Hit <kbd className="px-2 py-1 rounded bg-white/10 font-mono text-sm">Ctrl</kbd> + <kbd className="px-2 py-1 rounded bg-white/10 font-mono text-sm">Enter</kbd> to hack the matrix
         </p>
       )}
 

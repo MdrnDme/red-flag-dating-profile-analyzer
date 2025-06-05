@@ -24,8 +24,8 @@ function App() {
     const steps = [...ANALYSIS_STEPS];
     if (konamiActive) {
       steps.push(
-        { message: "Activating savage mode", icon: "🔥" },
-        { message: "Preparing extra spicy responses", icon: "🌶️" }
+        { message: "Activating digital warfare mode", icon: "🔥", color: "rgb(244,63,94)" },
+        { message: "Loading extra savage responses", icon: "🌶️", color: "rgb(236,72,153)" }
       );
     }
     
@@ -187,7 +187,7 @@ function App() {
       </main>
       <footer className="glass py-6 mt-12">
         <div className="container mx-auto max-w-4xl px-6 text-center text-white/60 text-sm">
-          Built with ❤️ and questionable life choices • © {new Date().getFullYear()} Red Flag AI
+          Crafted in the digital wasteland • No dating lives were harmed in the making of this tool 
           <span className="text-xs ml-2 text-white/40">v1.0.0</span>
         </div>
       </footer>

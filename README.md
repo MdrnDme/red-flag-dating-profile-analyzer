@@ -1,63 +1,57 @@
 # Red Flag Dating Profile Analyzer
 
-Analyzes dating profiles and conversations to identify potential red flags and compatibility issues. Built because dating apps are full of BS and people need better tools to avoid wasting time.
+Welcome to the digital wasteland. This is the tool for anyone sick of swiping through the same recycled lies, gym selfies, and "adventure" clichés. If you want corporate buzzwords, go back to LinkedIn. If you want the truth (and maybe a little trauma), keep reading.
 
-## What It Does
+## What This Actually Does (No Fluff)
 
-Scans dating profiles and chat logs for:
-- Inconsistencies in stated interests vs actual knowledge
-- Communication red flags and manipulation patterns  
-- Compatibility scoring based on actual substance
-- Real interest validation vs surface-level claims
+- **Profile Dissection**: Paste a dating profile or upload a screenshot. We’ll rip it apart and tell you what’s really going on behind the curated nonsense.
+- **Chat Autopsy**: Drop in your DMs or chat logs. We’ll flag the manipulation, the ghosting patterns, and the red flags you keep ignoring.
+- **Compatibility Reality Check**: Forget “you both like dogs.” We score based on substance, not surface-level BS. If you’re a walking red flag, we’ll tell you that too.
+- **Generational Warfare**: See how the cringe changes from Boomers to Gen Z. Spoiler: everyone’s lying, just in different fonts.
+- **Final Verdict**: Get a summary that doesn’t sugarcoat. If it stings, good. That means it’s working.
+- **Demo Mode**: Paranoid? Test it with fake data. We don’t care.
+- **Export the Carnage**: Save your results or send them to your group chat for a roast session.
 
-No fancy marketing BS - just pattern recognition applied to dating profiles.
+## Why? Because Dating Apps Are a Joke
 
-## Features
+You’re not finding love. You’re dodging scams, bots, and people who peaked in high school. This app is your digital lie detector, built by someone who’s seen enough after-hours NYC chaos to know a red flag when it’s waving.
 
-- **Profile Analysis**: Upload screenshots or paste text from dating profiles
-- **Chat Analysis**: Analyze conversation patterns for red flags
-- **Compatibility Scoring**: Get actual compatibility metrics
-- **Demo Mode**: Test with sample data if you don't want to upload real profiles
-- **Export Results**: Save analysis results as PDF or share via link
+## Tech Stack (For the Paranoid & the Nerds)
 
-## Tech Stack
+- React, TypeScript, Vite (because we’re not animals)
+- Tailwind CSS (for the hot pink glow)
+- Supabase (because Firebase is for sellouts)
+- Claude AI (for the analysis, not the therapy)
+- Custom pattern-matching that doesn’t care about your feelings
 
-- React + TypeScript + Vite
-- Tailwind CSS for styling
-- Supabase for backend/database
-- Claude AI for profile analysis
-- Custom pattern matching algorithms
-
-## Installation
+## Install & Run (If You Can Read)
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Usage
+## How To Use (Don’t Overthink It)
 
-1. Upload a dating profile screenshot or paste profile text
-2. Wait for AI analysis (takes 10-30 seconds)
-3. Review red flags, compatibility score, and recommendations
-4. Use the insights to make better dating decisions
+1. Paste a profile or upload a screenshot.
+2. Hit analyze. Wait a few seconds. Go get a drink.
+3. Read the results. Laugh, cry, or rage-quit dating.
+4. Share the pain with friends, or ignore the advice and repeat your mistakes. Up to you.
 
-## How It Works
+## How It Works (The Short Version)
 
-The analyzer uses pattern recognition to identify:
-- Inconsistencies between claimed interests and actual knowledge depth
-- Communication patterns that indicate manipulation or dishonesty
-- Compatibility factors based on actual substance vs surface-level attractions
-- Warning signs in conversation flow and response patterns
-
-Not perfect, but better than going in blind.
+Pattern recognition, AI, and a healthy dose of cynicism. We look for:
+- Contradictions and copy-paste interests
+- Manipulation tactics and ghosting red flags
+- Actual compatibility (not just “likes pizza”)
+- Conversation patterns that scream “run”
 
 ## Contributing
 
-Found bugs? Want to add features? PRs welcome.
+Found a bug? Want to add a feature? PRs welcome, but don’t pitch me any “synergy” or “disruptive” nonsense.
 
-See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details.
+See [CONTRIBUTING.md](docs/CONTRIBUTING.md) if you’re brave.
 
 ## License
 
-MIT - Use it however you want.
+MIT. Use it, fork it, break it. Just don’t sell it to a VC.

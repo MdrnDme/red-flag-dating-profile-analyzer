@@ -17,7 +17,7 @@ export const ShareResults: React.FC<ShareResultsProps> = ({ result }) => {
   const [shareId] = React.useState(() => nanoid(10));
   
   const shareUrl = `${window.location.origin}/share/${shareId}`;
-  const shareText = `I got a ${result.overallScore}/100 on my dating profile analysis! Check out your own profile at RedFlag AI`;
+  const shareText = `I survived the digital necropsy and got ${result.overallScore}/100! Get your dating profile brutally analyzed at Red Flag AI`;
   
   const handleCopy = async () => {
     await navigator.clipboard.writeText(shareUrl);
@@ -34,7 +34,7 @@ export const ShareResults: React.FC<ShareResultsProps> = ({ result }) => {
           className="flex items-center gap-2 px-4 py-2 text-lg font-medium text-white/90 glass rounded-lg hover:bg-white/10 transition-colors"
         >
           <Share2 className="w-5 h-5" />
-          Share Analysis
+          Share the Carnage
         </motion.button>
       </Popover.Trigger>
 
