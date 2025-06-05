@@ -1,20 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Loader2, Shuffle, AlertTriangle, Search, Settings, Wand2, Camera, Sparkles, Scale, Crown, Lock } from 'lucide-react';
-import { EXAMPLE_PR          <Tabs.Trigger
-            value="single"
-            className="px-4 py-2 text-base font-medium text-white/60 border-b-2 border-transparent data-[state=active]:border-red-500 data-[state=active]:text-white transition-colors flex items-center gap-2"
-          >
-            <Search className="w-4 h-4" />
-            Solo Target
-          </Tabs.Trigger>
-          <Tabs.Trigger
-            value="compare"
-            className="px-4 py-2 text-base font-medium text-white/60 border-b-2 border-transparent data-[state=active]:border-red-500 data-[state=active]:text-white transition-colors flex items-center gap-2"
-          >
-            <Scale className="w-4 h-4" />
-            Death Match
-          </Tabs.Trigger>OFILE_CHARS } from '../types';
+import { Loader2, Shuffle, Search, Settings, Sparkles, Scale, Lock } from 'lucide-react';
+import { EXAMPLE_PROFILES, MAX_PROFILE_CHARS } from '../types';
 import Filter from 'bad-words';
 import * as Tabs from '@radix-ui/react-tabs';
 import * as Dialog from '@radix-ui/react-dialog';
@@ -109,12 +96,9 @@ export const ProfileInput: React.FC<ProfileInputProps> = ({
   setActiveTab,
   isDemoMode = false
 }) => {
-  const [error, setError] = useState<string>('');
   const [charCount, setCharCount] = useState(0);
   const [compareCharCount, setCompareCharCount] = useState(0);
-  const [hasProfanity, setHasProfanity] = useState(false);
   const [draftTimeout, setDraftTimeout] = useState<NodeJS.Timeout>();
-  const [isTyping, setIsTyping] = useState(false);
   const [selectedPlatform, setSelectedPlatform] = useState('');
   const [selectedModel, setSelectedModel] = useState('claude4-vision');
   const [showSettings, setShowSettings] = useState(false);
@@ -124,29 +108,27 @@ export const ProfileInput: React.FC<ProfileInputProps> = ({
   useEffect(() => {
     setCharCount(profile.length);
     setCompareCharCount(comparisonProfile.length);
-    setIsTyping(true);
     
     if (draftTimeout) clearTimeout(draftTimeout);
     const timeout = setTimeout(() => {
       localStorage.setItem('profileDraft', profile);
-      setIsTyping(false);
     }, 1000);
     setDraftTimeout(timeout);
 
     if (profile.length > 0) {
       if (profile.length < 10) {
-        setError('Minimum 10 characters required for analysis');
+        // setError('Minimum 10 characters required for analysis'); // unused
       } else if (profile.length > MAX_PROFILE_CHARS) {
-        setError(`Maximum ${MAX_PROFILE_CHARS} characters exceeded`);
+        // setError(`Maximum ${MAX_PROFILE_CHARS} characters exceeded`); // unused
       } else {
-        setError('');
+        // setError('');
       }
     } else {
-      setError('');
+      // setError('');
     }
 
     try {
-      setHasProfanity(filter.isProfane(profile));
+      filter.isProfane(profile); // just call for side effect if needed
     } catch (e) {
       console.error('Profanity filter error:', e);
     }

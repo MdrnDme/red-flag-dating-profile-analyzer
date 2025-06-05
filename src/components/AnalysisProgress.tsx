@@ -31,16 +31,15 @@ export const AnalysisProgress: React.FC<AnalysisProgressProps> = ({ currentStep,
             }}
             transition={{ duration: 2, repeat: Infinity }}
           >
+            {/* Removed icon, just a cyberpunk bar */}
             <motion.div
-              className="w-12 h-12 rounded-xl glass flex items-center justify-center"
+              className="w-12 h-2 rounded bg-gradient-to-r from-rose-500 via-pink-500 to-rose-500 shadow-lg"
               animate={{ 
-                scale: [1, 1.1, 1],
-                borderColor: ['rgba(255,255,255,0.1)', 'rgba(244,63,94,0.3)', 'rgba(255,255,255,0.1)']
+                scaleX: [1, 1.5, 1],
+                opacity: [0.7, 1, 0.7]
               }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              <span className="text-2xl">{ANALYSIS_STEPS[currentStep]?.icon || '🔍'}</span>
-            </motion.div>
+              transition={{ duration: 1.5, repeat: Infinity }}
+            />
             <h2 className="text-2xl font-black text-white/90">
               {ANALYSIS_STEPS[currentStep]?.message || 'Analyzing Profile'}
             </h2>

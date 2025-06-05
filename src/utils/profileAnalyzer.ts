@@ -2,6 +2,30 @@ import { ProfileTypeResult, TranslationGuide, AnalysisResult, ProfileComparison 
 import { nanoid } from 'nanoid';
 import { supabase } from './supabase';
 
+// --- CYBER SEXY UI/UX ENHANCEMENTS ---
+// 1. Add a cyberpunk color palette and neon accent variables (for future use in UI components)
+export const CYBER_COLORS = {
+  neonPink: '#FF00C8',
+  neonBlue: '#00FFF7',
+  neonPurple: '#A259FF',
+  darkBg: '#0A0A23',
+  glassBg: 'rgba(20,20,40,0.85)',
+  accent: 'linear-gradient(90deg, #FF00C8 0%, #00FFF7 100%)',
+};
+
+// 2. Add a function to generate a cyber-sexy summary for each profile type
+function cyberSexySummary(type: string, traits: string[]): string {
+  const base = `This ${type.toLowerCase()} is dripping with ${traits.join(', ')} energy.`;
+  const endings = [
+    'Would hack your heart and leave a digital trace.',
+    'Glows under blacklight and blue screens.',
+    'Knows how to make sparks fly in the mainframe.',
+    'Could outmatch you in both code and chemistry.',
+    'Dangerously attractive to anyone with a pulse and a password.'
+  ];
+  return `${base} ${endings[Math.floor(Math.random() * endings.length)]}`;
+}
+
 // Learning system weights
 const LEARNING_WEIGHTS = {
   career: { base: 0.4, trend: 0.1 },
@@ -129,7 +153,7 @@ export async function analyzeProfileTypes(text: string): Promise<ProfileTypeResu
         phrase: data.positives[Math.floor(Math.random() * data.positives.length)],
         interpretation: data.insights[Math.floor(Math.random() * data.insights.length)],
         traits: data.traits,
-        summary: `Strong ${category} focus with evolving trends`
+        summary: cyberSexySummary(category, data.traits)
       });
     }
   }
@@ -148,11 +172,11 @@ export function getProfileResponses(profileTypes: ProfileTypeResult[]) {
     personalityIndicators: [] as string[],
     bottomLine: "Seeking balance in career, connection, and lifestyle",
     generationalTakes: {
-      genZ: "Focused on authentic connections and career growth 💫",
-      millennial: "Balancing ambition with meaningful relationships ✨",
-      genX: "Values success while seeking genuine connection 🎯",
-      boomer: "Traditional values meet modern aspirations 🌟"
-    }
+      genZ: "Gen Z: Authenticity is a flex, but so is ghosting.",
+      millennial: "Millennial: Hustle culture meets existential dread.",
+      genX: "Gen X: Still pretending to care about work-life balance.",
+      boomer: "Boomer: Traditional values, modern confusion."
+    } as import('../types').GenerationalTake
   };
 
   profileTypes.forEach(type => {

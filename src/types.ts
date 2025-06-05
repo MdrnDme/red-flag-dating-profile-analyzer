@@ -10,6 +10,20 @@ export interface ProfileType {
   greenFlags: string[];
 }
 
+export interface ProfileTypeResult {
+  type: string;
+  confidence: number;
+  phrase: string;
+  interpretation: string;
+  traits: string[];
+  summary: string;
+}
+
+export interface TranslationGuide {
+  said: string;
+  meant: string;
+}
+
 export interface GenerationalTake {
   genZ: string;
   millennial: string;
@@ -46,13 +60,13 @@ export interface ComparisonResult {
 }
 
 export const ANALYSIS_STEPS = [
-  { message: "Scanning for bullshit patterns", icon: "🕵️", color: "rgb(244,63,94)" },
-  { message: "Running psychological warfare protocols", icon: "🧠", color: "rgb(236,72,153)" },
-  { message: "Decoding hidden red flags", icon: "🚩", color: "rgb(219,39,119)" },
-  { message: "Extracting authentic signals", icon: "✨", color: "rgb(244,63,94)" },
-  { message: "Cross-referencing generational cringe", icon: "📊", color: "rgb(236,72,153)" },
-  { message: "Calculating compatibility chaos", icon: "💥", color: "rgb(219,39,119)" },
-  { message: "Preparing digital necropsy report", icon: "📋", color: "rgb(244,63,94)" }
+  { message: "Scanning for deception patterns", icon: null, color: "rgb(244,63,94)" },
+  { message: "Deploying psychological warfare protocols", icon: null, color: "rgb(236,72,153)" },
+  { message: "Decoding hidden red flags", icon: null, color: "rgb(219,39,119)" },
+  { message: "Extracting authentic signals", icon: null, color: "rgb(244,63,94)" },
+  { message: "Cross-referencing generational cringe", icon: null, color: "rgb(236,72,153)" },
+  { message: "Calculating compatibility chaos", icon: null, color: "rgb(219,39,119)" },
+  { message: "Preparing digital necropsy report", icon: null, color: "rgb(244,63,94)" }
 ];
 
 export const EASTER_EGG_RESPONSES = [
@@ -83,3 +97,27 @@ export const EXAMPLE_PROFILES = [
     text: "Adventure seeker and thrill junkie! Rock climbing, skydiving, motorcycle rides - if it gets my adrenaline pumping, I'm in. Looking for someone who can keep up with my lifestyle."
   }
 ];
+
+export interface ChatMessage {
+  text: string;
+  sender?: string;
+  timestamp?: number;
+  replyTime?: number;
+}
+
+export interface ChatAnalysis {
+  id: string;
+  messages: ChatMessage[];
+  insights: {
+    interest: number;
+    engagement: number;
+    chemistry: number;
+    intentions: string[];
+    redFlags: string[];
+    greenFlags: string[];
+    nextMoves: string[];
+    relationshipPotential: number;
+  };
+  patterns: Record<string, number>;
+  recommendations: string[];
+}
