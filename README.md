@@ -1,151 +1,63 @@
-# RedFlag AI - Elite Dating Intelligence
+# Red Flag Dating Profile Analyzer
 
-> "Finally, an AI that understands the depth of technical minds and the complexity of modern relationships."
+Analyzes dating profiles and conversations to identify potential red flags and compatibility issues. Built because dating apps are full of BS and people need better tools to avoid wasting time.
 
-![RedFlag AI - Elite Dating Intelligence](https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
+## What It Does
 
-## The Problem
+Scans dating profiles and chat logs for:
+- Inconsistencies in stated interests vs actual knowledge
+- Communication red flags and manipulation patterns  
+- Compatibility scoring based on actual substance
+- Real interest validation vs surface-level claims
 
-Dating in the tech world is broken. Surface-level algorithms match on keywords, not knowledge. They can't distinguish between someone who truly understands neural networks and someone who just watched a YouTube video about AI.
+No fancy marketing BS - just pattern recognition applied to dating profiles.
 
-## Our Solution
+## Features
 
-RedFlag AI goes beyond superficial pattern matching. Our advanced neural networks analyze technical depth, intellectual compatibility, and authentic expertise in real-time:
+- **Profile Analysis**: Upload screenshots or paste text from dating profiles
+- **Chat Analysis**: Analyze conversation patterns for red flags
+- **Compatibility Scoring**: Get actual compatibility metrics
+- **Demo Mode**: Test with sample data if you don't want to upload real profiles
+- **Export Results**: Save analysis results as PDF or share via link
 
-### 🧠 Technical Depth Analysis
-We don't just scan for keywords - we understand context. Our AI can tell the difference between:
-- Real ML/AI expertise vs. buzzword dropping
-- Genuine technical discussions vs. surface knowledge
-- Actual project experience vs. theoretical concepts
-- True innovation mindset vs. trend following
+## Tech Stack
 
-### 💡 Intellectual Synergy Detection
-Find minds that match yours:
-- Knowledge graph mapping for shared technical interests
-- Learning velocity analysis for growth compatibility
-- Discussion quality scoring for intellectual depth
-- Innovation pattern recognition for creative alignment
+- React + TypeScript + Vite
+- Tailwind CSS for styling
+- Supabase for backend/database
+- Claude AI for profile analysis
+- Custom pattern matching algorithms
 
-### 🚀 Career Trajectory Matching
-Connect with ambitious tech professionals:
-- Technical career path alignment
-- Innovation potential scoring
-- Project experience validation
-- Growth trajectory analysis
-
-### ❤️ Relationship Intelligence
-Build meaningful connections:
-- Deep pattern recognition for communication styles
-- Value system analysis for fundamental alignment
-- Growth compatibility for mutual development
-- Long-term potential evaluation
-
-## Elite Features
-
-### 🎯 Multi-Model Neural Analysis
-```python
-# Example: Technical Depth Scoring
-def analyze_technical_depth(conversation):
-    signals = detect_technical_signals(conversation)
-    authenticity = validate_expertise(signals)
-    depth = measure_knowledge_depth(signals)
-    return calculate_technical_score(authenticity, depth)
-```
-
-### 🔍 Pattern Recognition
-- Real-time neural processing
-- Technical authenticity validation
-- Success pattern matching
-- Compatibility prediction
-
-### 🎨 Innovation Detection
-- Creative problem-solving analysis
-- Project experience validation
-- Technical creativity scoring
-- Innovation mindset evaluation
-
-### 🌟 Growth Potential
-- Learning velocity tracking
-- Knowledge expansion patterns
-- Skill development alignment
-- Future trajectory prediction
-
-## Success Metrics
-
-Our neural networks have revolutionized tech dating:
-
-- **40%** Higher Technical Compatibility
-  - Deeper technical discussions
-  - Shared project interests
-  - Aligned innovation goals
-
-- **35%** Better Conversations
-  - More meaningful exchanges
-  - Technical depth exploration
-  - Authentic expertise sharing
-
-- **50%** Increased Intellectual Synergy
-  - Matched learning velocities
-  - Compatible growth paths
-  - Aligned technical interests
-
-- **25%** Higher Success Rate
-  - Long-term compatibility
-  - Value alignment
-  - Growth synchronization
-
-## Privacy & Security
-
-Your intellectual property is safe with us:
-- Zero-knowledge processing
-- End-to-end encryption
-- Real-time neural analysis
-- Privacy-first architecture
-
-## Why Choose RedFlag AI?
-
-### For Engineers & Developers
-- Find partners who understand your code, not just your keywords
-- Match with minds that challenge your technical growth
-- Connect over real projects, not just profiles
-
-### For AI/ML Professionals
-- Match based on genuine ML/AI expertise
-- Find partners passionate about neural networks
-- Connect over shared technical innovations
-
-### For Tech Leaders
-- Match with ambitious, growth-minded professionals
-- Find partners who understand your vision
-- Connect over innovation and leadership
-
-## Getting Started
+## Installation
 
 ```bash
-# Clone your perfect match
-git clone perfect-match
-
-# Install chemistry
-npm install connection
-
-# Run your heart
-npm run love
+npm install
+npm run dev
 ```
 
-## Join Our Mission
+## Usage
 
-Want to help revolutionize tech dating? We're looking for:
-- ML/AI Engineers
-- Neural Network Architects
-- Pattern Recognition Experts
-- Relationship Intelligence Researchers
+1. Upload a dating profile screenshot or paste profile text
+2. Wait for AI analysis (takes 10-30 seconds)
+3. Review red flags, compatibility score, and recommendations
+4. Use the insights to make better dating decisions
 
-Check our [Contributing Guide](docs/CONTRIBUTING.md) and join our mission!
+## How It Works
+
+The analyzer uses pattern recognition to identify:
+- Inconsistencies between claimed interests and actual knowledge depth
+- Communication patterns that indicate manipulation or dishonesty
+- Compatibility factors based on actual substance vs surface-level attractions
+- Warning signs in conversation flow and response patterns
+
+Not perfect, but better than going in blind.
+
+## Contributing
+
+Found bugs? Want to add features? PRs welcome.
+
+See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details.
 
 ## License
 
-MIT License - Because love should be open source! 💝
-
----
-
-Built with Neural Networks and ❤️ by the RedFlag team
+MIT - Use it however you want.
