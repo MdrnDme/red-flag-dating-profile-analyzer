@@ -37,7 +37,7 @@ export const Header: React.FC = () => {
           </div>
           
           <p className="text-lg md:text-xl text-white/60 font-medium tracking-wide relative">
-            Elite Dating Intelligence
+            Dating Profile Analyzer
             <motion.div 
               className="absolute -inset-2 bg-gradient-to-r from-red-500/5 via-pink-500/5 to-purple-500/5 rounded-lg -z-10"
               animate={{

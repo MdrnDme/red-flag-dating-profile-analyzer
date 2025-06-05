@@ -54,20 +54,20 @@ interface PremiumFeature {
 
 const PREMIUM_FEATURES: PremiumFeature[] = [
   {
-    name: "Elite Analysis",
-    description: "Unlock our most advanced AI models for deeper insights",
+    name: "Advanced Analysis",
+    description: "More detailed analysis with additional AI models",
     price: 9.99,
     affiliateUrl: "https://example.com/elite-analysis"
   },
   {
     name: "Photo Analysis",
-    description: "AI-powered photo analysis with Claude 4 Vision",
+    description: "Analyze photos in addition to text profiles",
     price: 14.99,
     affiliateUrl: "https://example.com/photo-analysis"
   },
   {
     name: "Compatibility Score",
-    description: "Compare profiles for deep compatibility insights",
+    description: "Compare two profiles for compatibility analysis",
     price: 19.99,
     affiliateUrl: "https://example.com/compatibility"
   }
@@ -166,7 +166,7 @@ export const ProfileInput: React.FC<ProfileInputProps> = ({
       className="card mb-8"
     >
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold text-white/90">INITIATE ANALYSIS</h2>
+        <h2 className="text-2xl font-bold text-white/90">Analyze Profile</h2>
         <div className="flex gap-4">
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -175,7 +175,7 @@ export const ProfileInput: React.FC<ProfileInputProps> = ({
             className="text-base font-medium text-white/60 hover:text-red-400 transition-colors flex items-center gap-2"
           >
             <Settings className="w-5 h-5" />
-            Configure
+            Settings
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -279,7 +279,7 @@ export const ProfileInput: React.FC<ProfileInputProps> = ({
                 id="profile"
                 value={profile}
                 onChange={(e) => setProfile(e.target.value)}
-                placeholder="Let our elite AI decode your dating profile..."
+                placeholder="Paste dating profile text here for analysis..."
                 className="w-full h-32 bg-transparent border border-white/10 rounded-lg p-3 text-white/70 focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-transparent transition-all resize-none"
                 disabled={isAnalyzing}
                 maxLength={MAX_PROFILE_CHARS}

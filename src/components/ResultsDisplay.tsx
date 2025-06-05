@@ -45,7 +45,7 @@ export const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ results }) => {
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-3xl font-bold text-white/90 flex items-center gap-3">
           <FlagIcon className="h-8 w-8 text-red-400" />
-          Profile Intel
+          Analysis Results
         </h2>
         <div className="flex gap-4">
           <ShareResults result={results} />
@@ -81,13 +81,13 @@ export const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ results }) => {
             value="generations"
             className="px-6 py-3 text-lg font-medium text-white/60 border-b-2 border-transparent data-[state=active]:border-red-500 data-[state=active]:text-white transition-colors"
           >
-            Multi-Gen Intel
+            Generation Analysis
           </Tabs.Trigger>
           <Tabs.Trigger
             value="verdict"
             className="px-6 py-3 text-lg font-medium text-white/60 border-b-2 border-transparent data-[state=active]:border-red-500 data-[state=active]:text-white transition-colors"
           >
-            Final Verdict
+            Summary
           </Tabs.Trigger>
         </Tabs.List>
 
