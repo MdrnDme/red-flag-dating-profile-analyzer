@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Inter, system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950;
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .btn:hover {
+    @apply transform scale-105 shadow-lg;
+  }
+  
+  .card {
+    @apply bg-gray-900/30 backdrop-blur-lg border border-gray-800/50 rounded-2xl p-6 shadow-xl transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-2xl hover:border-gray-700/50 transition-all duration-200;
+  }
+  
+  .glass {
+    @apply backdrop-blur-lg bg-gray-900/30 border border-gray-800/30;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-rose-400 via-pink-400 to-rose-400;
+    background-size: 200% auto;
+    animation: textGradient 4s linear infinite;
+  }
+
+  .arcade-glow {
+    text-shadow: 0 0 10px rgba(244, 63, 94, 0.7),
+                 0 0 20px rgba(244, 63, 94, 0.5),
+                 0 0 30px rgba(244, 63, 94, 0.3);
+    animation: neonPulse 2s infinite;
+  }
+
+  .love-dream {
+    text-shadow: 0 0 10px rgba(244, 63, 94, 0.7),
+                 0 0 20px rgba(219, 39, 119, 0.5),
+                 0 0 30px rgba(236, 72, 153, 0.3);
+    animation: dreamPulse 3s infinite;
+  }
+}
+
+@keyframes textGradient {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    filter: brightness(1) drop-shadow(0 0 5px rgba(244, 63, 94, 0.5));
+  }
+  50% {
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(244, 63, 94, 0.7));
+  }
+}
+
+@keyframes dreamPulse {
+  0%, 100% {
+    filter: brightness(1) drop-shadow(0 0 5px rgba(244, 63, 94, 0.5));
+  }
+  50% {
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(219, 39, 119, 0.7));
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.bg-grid-pattern {
+  background-image: linear-gradient(rgba(244, 63, 94, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(244, 63, 94, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: gridScroll 20s linear infinite;
+}
+
+@keyframes gridScroll {
+  from { background-position: 0 0; }
+  to { background-position: 50px 50px; }
+}
