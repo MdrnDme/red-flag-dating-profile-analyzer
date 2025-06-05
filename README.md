@@ -4,7 +4,7 @@ Welcome to the digital wasteland. This is the tool for anyone sick of swiping th
 
 ## What This Actually Does (No Fluff)
 
-- **Profile Dissection**: Paste a dating profile or upload a screenshot. We’ll rip it apart and tell you what’s really going on behind the curated nonsense.
+- **Profile Dissection**: Paste a dating profile or upload a screenshot. Our highly-advanced slut/sociopath algo will rip it apart and tell you what’s really going on behind the curated nonsense.
 - **Chat Autopsy**: Drop in your DMs or chat logs. We’ll flag the manipulation, the ghosting patterns, and the red flags you keep ignoring.
 - **Compatibility Reality Check**: Forget “you both like dogs.” We score based on substance, not surface-level BS. If you’re a walking red flag, we’ll tell you that too.
 - **Generational Warfare**: See how the cringe changes from Boomers to Gen Z. Spoiler: everyone’s lying, just in different fonts.
