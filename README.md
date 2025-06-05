@@ -55,3 +55,7 @@ See [CONTRIBUTING.md](docs/CONTRIBUTING.md) if you’re brave.
 ## License
 
 MIT. Use it, fork it, break it. Just don’t sell it to a VC.
+
+---
+
+designed and coded by the original old school red flag you can't resist.
